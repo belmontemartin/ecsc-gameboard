@@ -1,5 +1,6 @@
-FROM debian:stable
+#FROM debian:stable
 #FROM ubuntu:latest
+FROM armbuild/debian:stable
 RUN apt-get update && apt-get install -y git
 COPY . /var/www
 RUN cd /var/www && ./setup.sh
